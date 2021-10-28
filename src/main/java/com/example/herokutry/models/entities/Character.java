@@ -1,12 +1,17 @@
 package com.example.herokutry.models.entities;
 
-public class Character
-{public int id;
- public String name;
- public double rating;
 
-  public Character(int id, String name, double rating) {
-    this.id = id;
-    this.name = name;
-    this.rating = rating;
-  }}
+import javax.persistence.*;
+
+@Entity
+@Table(name = "chars")
+public class Character {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int id;
+    @Column
+    public String name;
+    @Column
+    public double rating;
+
+}
