@@ -15,5 +15,10 @@ public class HomeController
   {
     return "Hello";
   }
-
+  @GetMapping(value = "/getAll")
+  public String getAll()
+          throws Exception
+  {
+    return "Hello";
+  }
 }
